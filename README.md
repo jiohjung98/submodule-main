@@ -1,3 +1,18 @@
+## Submodule이란
+
+일반적으로 하나의 repository에 해당 프로젝트의 모든 내용이 포함된다.<br/>
+그러나 하나의 repo로 관리하기 어려운 대형 프로젝트 역시 존재한다.<br/>
+쉽게 shared library(slib)를 가져다 쓰는 경우를 생각해볼 수 있다.<br/>
+가령 무지성으로 slib의 내용을 싹싹 긁어다가 하나의 main repo로 병합하여 관리한다고 생각해보자.
+
+위 경우 두 가지 문제가 발생할 수 있다:
+
+- slib의 업데이트가 이뤄졌을 때, 버전 관리가 매우 번거롭다.(main repo와 commit logs를 공유하기 때문에)<br/>
+- main repo의 변화에 맞춰 slib의 내용이 변경될 경우, 이를 사용하는 다른 모든 repo의 내용 역시 manually하게 전부 변경 해야 함. 당연히 slib의 내용은 main repo의 종속적이므로 다른 repo의 내용 역시 전부 manually하게 직접 변경 해줘야 함.
+<br/>
+이러한 문제 해결을 위해 git은 submodule 이라는 개념을 지원한다. submodule은 repository 안의 repository를 허용한다. main repository와 sub repository (submodule)은 서로 독립적인 commit을 가지며 각각 따로 관리되어질 수 있다.
+<br/><br/><br/>
+
 ## Submodule 만들기
 
 `submodule` 을 추가할 `main repository` 를 생성하고 그 폴더 내에서 `submodule`  추가
