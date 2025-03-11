@@ -1,0 +1,6 @@
+[submodule "npm-producer"]
+	path = npm-producer
+	url = https://github.com/jiohjung98/npm-producer.git
+[submodule "npm-consumer"]
+	path = npm-consumer
+	url = https://github.com/jiohjung98/npm-consumer.git
